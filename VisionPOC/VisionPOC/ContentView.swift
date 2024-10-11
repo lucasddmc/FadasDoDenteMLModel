@@ -86,7 +86,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     // Process each frame from the camera
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        
+    
         // Create a human body pose request
         let request = VNDetectHumanBodyPoseRequest { request, error in
             if let results = request.results as? [VNHumanBodyPoseObservation], let result = results.first {

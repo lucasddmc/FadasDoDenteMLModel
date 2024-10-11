@@ -11,7 +11,8 @@ import SwiftUI
 struct VisionPOCApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            HandDetectionView()
         }
     }
 }
